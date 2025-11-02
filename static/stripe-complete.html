@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Complete - Pulse Business</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            padding: 48px 32px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .icon {
+            background: #4caf50;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 36px;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+        
+        h1 {
+            font-size: 28px;
+            margin-bottom: 16px;
+            color: #1a1a1a;
+        }
+        
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 32px;
+        }
+        
+        .success-message {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 24px;
+            color: #2e7d32;
+        }
+        
+        .button {
+            background: #4caf50;
+            color: white;
+            padding: 16px 32px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s ease;
+            margin: 8px;
+        }
+        
+        .button:hover {
+            background: #43a047;
+        }
+        
+        .secondary-button {
+            background: transparent;
+            color: #4caf50;
+            border: 2px solid #4caf50;
+        }
+        
+        .secondary-button:hover {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .features {
+            text-align: left;
+            margin: 24px 0;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            margin: 12px 0;
+            padding: 8px;
+            background: #f8f9fa;
+            border-radius: 6px;
+        }
+        
+        .feature-icon {
+            margin-right: 12px;
+            color: #4caf50;
+        }
+        
+        .countdown {
+            font-size: 14px;
+            color: #999;
+            margin-top: 16px;
+        }
+        
+        .app-link {
+            margin-top: 24px;
+            font-size: 14px;
+            color: #999;
+        }
+        
+        .app-link a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🎉</div>
+        <h1>Payment Setup Complete!</h1>
+        
+        <div class="success-message">
+            <strong>Congratulations!</strong> Your Stripe account is now active and ready to receive payments.
+        </div>
+        
+        <p>
+            You're all set to start earning from your deals. Your payouts will be processed daily.
+        </p>
+        
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">✅</span>
+                <span>Daily payouts enabled</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">💰</span>
+                <span>Keep 88% of every sale</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">📊</span>
+                <span>Track earnings in real-time</span>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🚀</span>
+                <span>Ready to create deals</span>
+            </div>
+        </div>
+        
+        <a href="#" class="button" onclick="openApp()">
+            Return to Pulse Business
+        </a>
+        
+        <a href="#" class="button secondary-button" onclick="createDeal()">
+            Create Your First Deal
+        </a>
+        
+        <div class="countdown">
+            Automatically redirecting to app in <span id="countdown">5</span> seconds...
+        </div>
+        
+        <div class="app-link">
+            <p>Need help? <a href="mailto:support@pulse.com">Contact Support</a></p>
+        </div>
+    </div>
+
+    <script>
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown');
+        
+        function updateCountdown() {
+            countdownElement.textContent = countdown;
+            countdown--;
+            
+            if (countdown < 0) {
+                openApp();
+            }
+        }
+        
+        // Update countdown every second
+        setInterval(updateCountdown, 1000);
+        
+        function openApp() {
+            // Try to open the app with success flag
+            const appUrl = 'pulse://business/stripe-success';
+            const fallbackUrl = 'https://incandescent-pixie-dd06ee.netlify.app/';
+            
+            // Try to open the app
+            window.location.href = appUrl;
+            
+            // Fallback after a short delay
+            setTimeout(() => {
+                window.location.href = fallbackUrl;
+            }, 1000);
+        }
+        
+        function createDeal() {
+            // Try to open the app directly to deal creation
+            const appUrl = 'pulse://business/create-deal';
+            const fallbackUrl = 'https://incandescent-pixie-dd06ee.netlify.app/';
+            
+            // Try to open the app
+            window.location.href = appUrl;
+            
+            // Fallback after a short delay
+            setTimeout(() => {
+                window.location.href = fallbackUrl;
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
