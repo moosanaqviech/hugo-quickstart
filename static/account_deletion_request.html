@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Deletion - Pulse Business</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background: #667eea;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        h1 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .deletion-info {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .deletion-info h3 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .deletion-info ul {
+            list-style-position: inside;
+            margin-bottom: 20px;
+        }
+
+        .deletion-info li {
+            margin-bottom: 8px;
+            color: #4a5568;
+        }
+
+        .email-section {
+            background: #ebf8ff;
+            border: 2px solid #bee3f8;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+        }
+
+        .email-section h3 {
+            color: #2b6cb0;
+            margin-bottom: 15px;
+        }
+
+        .email-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 15px 0;
+            transition: background 0.3s ease;
+        }
+
+        .email-button:hover {
+            background: #5a67d8;
+        }
+
+        .email-address {
+            font-family: 'Courier New', monospace;
+            background: #f1f5f9;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #cbd5e0;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #2d3748;
+        }
+
+        .warning {
+            background: #fed7d7;
+            border: 1px solid #feb2b2;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .warning h4 {
+            color: #c53030;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .warning p {
+            color: #742a2a;
+            margin-bottom: 8px;
+        }
+
+        .timeline {
+            background: #f0fff4;
+            border: 1px solid #9ae6b4;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+
+        .timeline h4 {
+            color: #2f855a;
+            margin-bottom: 10px;
+        }
+
+        .timeline p {
+            color: #276749;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">P</div>
+        
+        <h1>Account Deletion Request</h1>
+        <p class="subtitle">Pulse Business App - Data Privacy & Account Management</p>
+
+        <div class="deletion-info">
+            <h3>What gets deleted:</h3>
+            <ul>
+                <li>Your business profile and account information</li>
+                <li>All deals and promotions you've created</li>
+                <li>Business analytics and performance data</li>
+                <li>Payment and payout information</li>
+                <li>All uploaded images and business content</li>
+                <li>App usage data and preferences</li>
+            </ul>
+        </div>
+
+        <div class="email-section">
+            <h3>To request account deletion:</h3>
+            <p>Send an email to:</p>
+            
+            <div class="email-address">naqvim@myumanitoba.ca</div>
+            
+            <a href="mailto:naqvim@myumanitoba.ca?subject=Pulse%20Business%20-%20Account%20Deletion%20Request&body=Hello,%0D%0A%0D%0AI%20would%20like%20to%20request%20the%20deletion%20of%20my%20Pulse%20Business%20account.%0D%0A%0D%0ABusiness%20Email:%20[Your%20registered%20email]%0D%0ABusiness%20Name:%20[Your%20business%20name]%0D%0A%0D%0AThank%20you." class="email-button">
+                Send Deletion Request
+            </a>
+            
+            <p><strong>Please include in your email:</strong></p>
+            <ul style="text-align: left; margin-top: 10px;">
+                <li>Your registered business email address</li>
+                <li>Your business name as it appears in the app</li>
+                <li>Confirmation that you want to permanently delete all data</li>
+            </ul>
+        </div>
+
+        <div class="warning">
+            <h4>⚠️ Important Notice</h4>
+            <p>• Account deletion is <strong>permanent and cannot be undone</strong></p>
+            <p>• All your business data, deals, and analytics will be permanently removed</p>
+            <p>• Any active deals will be immediately deactivated</p>
+            <p>• You will lose access to all app features and historical data</p>
+        </div>
+
+        <div class="timeline">
+            <h4>⏱️ Processing Timeline</h4>
+            <p>We will process your deletion request within <strong>30 days</strong> and send you an email confirmation once your account and all associated data have been permanently deleted from our systems.</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2024 Pulse Business App</p>
+            <p>This page complies with Google Play Store data deletion requirements and privacy regulations.</p>
+        </div>
+    </div>
+</body>
+</html>
